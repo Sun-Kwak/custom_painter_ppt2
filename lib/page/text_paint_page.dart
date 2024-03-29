@@ -133,24 +133,24 @@ class RepeatingCubicUnderlinedTextPainter extends CustomPainter {
   @override
   bool shouldRepaint(CustomPainter oldDelegate) => false;
 }
-
-class MasterPainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    Paint paint = Paint();
-    paint.strokeWidth = 2;
-    paint.color = Colors.black;
-    paint.style = PaintingStyle.stroke;
-    Offset center = Offset(size.width/2, size.height/2);
-
-
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return false;
-  }
-}
+//
+// class MasterPainter extends CustomPainter {
+//   @override
+//   void paint(Canvas canvas, Size size) {
+//     Paint paint = Paint();
+//     paint.strokeWidth = 2;
+//     paint.color = Colors.black;
+//     paint.style = PaintingStyle.stroke;
+//     Offset center = Offset(size.width/2, size.height/2);
+//
+//
+//   }
+//
+//   @override
+//   bool shouldRepaint(covariant CustomPainter oldDelegate) {
+//     return false;
+//   }
+// }
 
 
 

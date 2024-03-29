@@ -3,6 +3,7 @@ import 'package:custom_paint_example/page/circle_paint_page.dart';
 import 'package:custom_paint_example/page/combined_paint_page.dart';
 import 'package:custom_paint_example/page/image_paint_page.dart';
 import 'package:custom_paint_example/page/line_paint_page.dart';
+import 'package:custom_paint_example/page/other_page.dart';
 import 'package:custom_paint_example/page/rectangle_paint_page.dart';
 import 'package:custom_paint_example/page/rounded_rectangle_page.dart';
 import 'package:custom_paint_example/page/text_paint_page.dart';
@@ -68,7 +69,10 @@ class MainPage extends StatelessWidget {
               child: Icon(Icons.format_color_text_outlined)), text: 'Text'),
           Tab(icon: SizedBox(
               width: 100,
-              child: Icon(Icons.dark_mode_sharp)), text: 'Combined'),
+              child: Icon(Icons.join_right_rounded)), text: 'Combined'),
+          Tab(icon: SizedBox(
+              width: 100,
+              child: Icon(Icons.keyboard_control_outlined)), text: 'others'),
         ],
         children: [
           LinePaintPage(),
@@ -80,6 +84,7 @@ class MainPage extends StatelessWidget {
           ImagePaintPage(),
           TextPaintPage(),
           CombinedPaintPage(),
+          OtherPage(),
         ],
       );
 }

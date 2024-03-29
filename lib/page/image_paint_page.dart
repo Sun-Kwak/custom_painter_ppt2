@@ -70,9 +70,16 @@ class _ImagePaintPageState extends State<ImagePaintPage> {
               ),
             ),
           ),
+          SizedBox(height: 30,),
           Center(
             child: Container(
-              width: screenWidth/2,
+                width: screenWidth/3,
+                child: Image.asset('assets/draw_image.png',fit: BoxFit.cover,)),
+          ),
+
+          Center(
+            child: Container(
+              width: screenWidth/3,
 
               child: Image.asset('assets/image_painter.png'),
             ),
@@ -114,6 +121,10 @@ class ImagePainter2 extends CustomPainter {
     final src = Rect.fromPoints(Offset(10.0, 20.0), Offset(300.0, 300.0));
     final dst = Rect.fromPoints(Offset(100.0, 150.0), Offset(500.0, 700.0));
     canvas.scale(-1.0, 1.0);
+    //image : 그릴 이미지
+    //src : 이미지의 어느 부분을 그릴지 (source)
+    //dst : 그릴 위치와 크기 (destination)
+    //paint : 이미지를 그릴 때 사용할 Paint
     canvas.drawImageRect(image, src, dst, paint);
     canvas.save();
     canvas.restore();
